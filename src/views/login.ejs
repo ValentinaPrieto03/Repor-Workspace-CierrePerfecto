@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Cierre Perfecto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("navbar") %>
+
+    <div class="login-container">
+        <h2>Inicio de Sesión</h2>
+
+        <% if (mensaje) { %>
+            <div class="error"><%= mensaje %></div>
+        <% } %>
+
+        <form method="POST" action="/login">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <p>¿No tienes cuenta? <a href="/registro">Regístrate aquí</a></p>
+    </div>
+</body>
+</html>
+
+

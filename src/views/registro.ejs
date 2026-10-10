@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - Cierre Perfecto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("navbar") %>
+
+    <div class="login-container">
+        <h2>Crear Usuario</h2>
+
+        <% if (mensaje) { %>
+            <div class="success"><%= mensaje %></div>
+        <% } %>
+
+        <form method="POST" action="/registro">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>

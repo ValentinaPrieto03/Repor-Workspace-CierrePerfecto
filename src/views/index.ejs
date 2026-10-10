@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cierre Perfecto - Inicio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("navbar") %>
+    <header class="hero">
+        <h1>Bienvenidos a Cierre Perfecto</h1>
+        <p>Soluciones de maquillaje corporativo en Colombia</p>
+        <% if (usuarioLogueado) { %>
+            <p class="welcome">Hola <%= usuarioLogueado %>, gracias por iniciar sesión.</p>
+        <% } %>
+    </header>
+    <section class="buttons">
+        <h2>Explora nuestras secciones</h2>
+        <div class="btn-group">
+            <a href="/productos" class="btn">Productos</a>
+            <a href="/servicios" class="btn">Servicios</a>
+            <a href="/contacto" class="btn">Contacto</a>
+        </div>
+    </section>
+</body>
+</html>
+
+

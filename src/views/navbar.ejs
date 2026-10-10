@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li><a href="/">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#">Servicios</a>
+            <ul class="dropdown-content">
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/servicios">Servicios</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </li>
+        <% if (usuarioLogueado) { %>
+            <li><a href="/logout">Cerrar sesión (<%= usuarioLogueado %>)</a></li>
+        <% } else { %>
+            <li><a href="/login">Login</a></li>
+        <% } %>
+    </ul>
+</nav>
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacto - Cierre Perfecto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("navbar") %>
+    <section class="contact-container">
+        <h2>Contáctanos</h2>
+        <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+        <% if (mensaje) { %>
+            <div class="success"><%= mensaje %></div>
+        <% } %>
+        <form method="POST" action="/contacto">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo" required>
+            <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
+
